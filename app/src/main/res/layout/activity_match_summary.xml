@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/match_summary_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MatchSummaryActivity">
+
+    <TextView
+        android:id="@+id/congratulations_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/fira_sans_medium"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/match_winner_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/congratulations_textView"
+        tools:src="@drawable/u_mumba_logo_fill" />
+
+    <TextView
+        android:id="@+id/summary_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#CAAA4E"
+        android:fontFamily="@font/fira_sans"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:text="@string/match_summary"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_winner_imageView" />
+
+    <TextView
+        android:id="@+id/first_team_label_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/fira_sans"
+        android:text="@string/first_team_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary_textView" />
+
+    <TextView
+        android:id="@+id/first_team_result_score_textView"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="@id/first_team_label_textView"
+        app:layout_constraintStart_toStartOf="@+id/first_team_label_textView"
+        app:layout_constraintTop_toBottomOf="@id/first_team_label_textView"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <View
+        android:id="@+id/vertical_divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/replay_button"
+        app:layout_constraintTop_toBottomOf="@id/summary_textView"/>
+
+    <TextView
+        android:id="@+id/second_team_label_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/fira_sans"
+        android:text="@string/second_team_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary_textView" />
+
+    <TextView
+        android:id="@+id/second_team_result_score_textView"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="@id/second_team_label_textView"
+        app:layout_constraintStart_toStartOf="@+id/second_team_label_textView"
+        app:layout_constraintTop_toBottomOf="@id/second_team_label_textView"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/replay_button"
+        android:layout_marginTop="24dp"
+        android:text="@string/replay"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_team_result_score_textView"
+        style="@style/khel_kabaddi_button_style" />
+
+</android.support.constraint.ConstraintLayout>

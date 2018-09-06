@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banner_imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner"
+        android:contentDescription="@string/match_banner"/>
+
+    <TextView
+        android:id="@+id/first_team_score_textView"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/first_team_score"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_imageView"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <TextView
+        android:id="@+id/second_team_score_textView"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/second_team_score"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_imageView"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <TextView
+        android:id="@+id/first_or_second_half_label_textView"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/first_or_second_half"
+        app:layout_constraintEnd_toStartOf="@id/second_team_score_textView"
+        app:layout_constraintStart_toEndOf="@+id/first_team_score_textView"
+        app:layout_constraintTop_toBottomOf="@+id/banner_imageView"
+        style="@style/khel_kabaddi_text_style3" />
+
+    <TextView
+        android:id="@+id/game_play_countdown_timer_textView"
+        android:layout_marginTop="8dp"
+        android:background="#CAAA4E"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:text="@string/match_countdown_timer"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintEnd_toStartOf="@id/second_team_score_textView"
+        app:layout_constraintStart_toEndOf="@+id/first_team_score_textView"
+        app:layout_constraintTop_toBottomOf="@+id/first_or_second_half_label_textView"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <TextView
+        android:id="@+id/first_team_players_in_court_label_textView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/first_team_players_in_court_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_team_score_textView"
+        style="@style/khel_kabaddi_text_style3" />
+
+    <TextView
+        android:id="@+id/first_team_players_in_court_count_textView"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/first_team_players_in_court_count"
+        app:layout_constraintEnd_toEndOf="@id/first_team_players_in_court_label_textView"
+        app:layout_constraintStart_toStartOf="@id/first_team_players_in_court_label_textView"
+        app:layout_constraintTop_toBottomOf="@+id/first_team_players_in_court_label_textView"
+        style="@style/khel_kabaddi_text_style2" />
+
+    <TextView
+        android:id="@+id/second_team_players_in_court_label_textView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/second_team_players_in_court_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_team_score_textView"
+        style="@style/khel_kabaddi_text_style3" />
+
+    <TextView
+        android:id="@+id/second_team_players_in_court_count_textView"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/second_team_players_in_court_count"
+        app:layout_constraintEnd_toEndOf="@id/second_team_players_in_court_label_textView"
+        app:layout_constraintStart_toStartOf="@id/second_team_players_in_court_label_textView"
+        app:layout_constraintTop_toBottomOf="@+id/second_team_players_in_court_label_textView"
+        style="@style/khel_kabaddi_text_style2" />
+
+    <ProgressBar
+        android:id="@+id/raid_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:max="10"
+        android:progressDrawable="@drawable/progress_circle"
+        app:layout_constraintBottom_toBottomOf="@id/first_team_players_in_court_count_textView"
+        app:layout_constraintEnd_toStartOf="@id/second_team_players_in_court_label_textView"
+        app:layout_constraintStart_toEndOf="@id/first_team_players_in_court_label_textView"
+        app:layout_constraintTop_toTopOf="@id/first_team_players_in_court_label_textView" />
+
+    <TextView
+        android:id="@+id/raid_countdown_timer_textView"
+        android:layout_margin="8dp"
+        android:text="@string/raid_countdown_timer"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@id/raid_progressBar"
+        app:layout_constraintEnd_toEndOf="@id/raid_progressBar"
+        app:layout_constraintStart_toStartOf="@id/raid_progressBar"
+        app:layout_constraintTop_toTopOf="@+id/raid_progressBar"
+        style="@style/khel_kabaddi_text_style1" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/first_team_raid_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/first_team_raid"
+        app:cornerRadius="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/raid_progressBar"
+        style="@style/khel_kabaddi_button_style" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/second_team_raid_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/second_team_raid"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/raid_progressBar"
+        style="@style/khel_kabaddi_button_style" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/first_team_touch_point_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/first_team_touch_point"
+        app:cornerRadius="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_team_raid_button"
+        style="@style/khel_kabaddi_button_style" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/second_team_touch_point_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/second_team_touch_point"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_team_raid_button"
+        style="@style/khel_kabaddi_button_style" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/first_team_tackle_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/first_team_tackle"
+        app:cornerRadius="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_team_touch_point_button"
+        style="@style/khel_kabaddi_button_style" />
+
+    <View
+        android:id="@+id/vertical_divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/start_second_half_button"
+        app:layout_constraintTop_toBottomOf="@id/raid_progressBar"/>
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/second_team_tackle_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/second_team_tackle"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_team_touch_point_button"
+        style="@style/khel_kabaddi_button_style" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/start_second_half_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/start_second_half"
+        android:textColor="@color/colorPrimary"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_team_tackle_button" />
+
+</android.support.constraint.ConstraintLayout>
