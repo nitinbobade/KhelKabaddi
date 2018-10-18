@@ -12,7 +12,8 @@ import android.widget.EditText;
 public class SplashActivity extends AppCompatActivity {
 
     Button letsPlayButton;
-    EditText matchTimeEditText, raidTimeEditText;
+    EditText matchTimeEditText;
+    EditText raidTimeEditText;
     ConstraintLayout splashActivityConstraintLayout;
 
     public static final String MATCH_TIME_IN_MINUTES = "com.ni3bobade.khelkabaddi.MATCH_TIME_IN_MINUTES";

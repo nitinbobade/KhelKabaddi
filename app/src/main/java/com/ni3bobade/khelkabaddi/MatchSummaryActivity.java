@@ -14,7 +14,10 @@ import java.text.MessageFormat;
 
 public class MatchSummaryActivity extends AppCompatActivity {
 
-    TextView congratulationsTextView, firstTeamResultScoreTextView, secondTeamResultScoreTextView;
+    TextView congratulationsTextView;
+    TextView firstTeamResultScoreTextView;
+    TextView secondTeamResultScoreTextView;
+
     ConstraintLayout matchSummaryConstraintLayout;
     ImageView matchWinnerImageView;
     Button replayButton;

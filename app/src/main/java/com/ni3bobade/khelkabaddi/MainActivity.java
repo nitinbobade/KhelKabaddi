@@ -31,16 +31,29 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout mainActivityConstraintLayout;
 
     // TextViews
-    TextView firstTeamScoreTextView, secondTeamScoreTextView, firstOrSecondHalfLabelTextView, gamePlayCountdownTimerTextView, firstTeamPlayersInCourtCountTextView, secondTeamPlayersInCourtCountTextView, raidCountdownTimerTextView;
+    TextView firstTeamScoreTextView;
+    TextView secondTeamScoreTextView;
+    TextView firstOrSecondHalfLabelTextView;
+    TextView gamePlayCountdownTimerTextView;
+    TextView firstTeamPlayersInCourtCountTextView;
+    TextView secondTeamPlayersInCourtCountTextView;
+    TextView raidCountdownTimerTextView;
 
     // Buttons
-    Button firstTeamRaidButton, secondTeamRaidButton, firstTeamTouchPointButton, secondTeamTouchPointButton, firstTeamTackleButton, secondTeamTackleButton, startSecondHalfButton;
+    Button firstTeamRaidButton;
+    Button secondTeamRaidButton;
+    Button firstTeamTouchPointButton;
+    Button secondTeamTouchPointButton;
+    Button firstTeamTackleButton;
+    Button secondTeamTackleButton;
+    Button startSecondHalfButton;
 
     // ProgressBar
     ProgressBar raidProgressBar;
 
     // countdown timer
-    private CountDownTimer raidCountDownTimer, gamePlayCountDownTimer;
+    private CountDownTimer raidCountDownTimer;
+    private CountDownTimer gamePlayCountDownTimer;
 
     // players in court
     private int firstTeamPlayersInCourtCount = 7;
